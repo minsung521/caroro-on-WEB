@@ -1,0 +1,86 @@
+$bigTitle: 72px;
+$smallTitle: 20px;
+$inputTitle: 22px;
+$bigLogoHeight: 504px;
+$mediumLogoHeight: 283px;
+$smallLogoHeight: 162px;
+$mainFontColor: #fff;
+$subFontColor: #888889;
+$pointColor: #017451;
+
+.basic-text {
+	color: $mainFontColor;
+}
+
+.container {
+	max-width: 1240px;
+	width: 100%;
+	margin: auto;
+	padding: 0 40px 200px 40px;
+}
+
+.row {
+	display: flex;
+}
+
+.col {
+	width: 50%;
+	// padding: 126px;
+	// overflow: hidden;
+}
+
+.title-box {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.big-title {
+	@extend .basic-text;
+	font-size: $bigTitle;
+	font-weight: bold;
+}
+
+.small-title {
+	@extend .basic-text;
+	font-size: $smallTitle;
+	font-weight: bold;
+	color: $subFontColor;
+}
+
+.input-title {
+	@extend .basic-text;
+	font-size: $inputTitle;
+}
+
+.imgFrame {
+	width: 634px;
+	overflow: hidden;
+}
+
+#login-page .logoImg {
+	position: absolute;
+	align-self: center;
+	height: $bigLogoHeight;
+}
+
+.input-wrap {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.btn-text {
+	font-size: 16px;
+	color: $mainFontColor;
+	background-color: $pointColor;
+}
+
+.submit {
+	// position: absolute;
+	width: 100%;
+	background-color: $pointColor;
+	box-shadow: none;
+	border: none;
+	border-radius: 15px;
+	height: 56px;
+}
