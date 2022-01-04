@@ -1,11 +1,10 @@
-$bigTitle: 72px;
+$bigMainTitle: 72px;
+$mediumMainTitle: 56px;
 $smallTitle: 20px;
 $inputTitle: 22px;
-$bigLogoHeight: 504px;
-$mediumLogoHeight: 283px;
-$smallLogoHeight: 162px;
 $mainFontColor: #fff;
 $subFontColor: #888889;
+$greyColor: #252527;
 $pointColor: #017451;
 
 .basic-text {
@@ -13,23 +12,31 @@ $pointColor: #017451;
 }
 
 .container {
-	max-width: 1240px;
 	width: 100%;
+	max-width: 1240px;
 	margin: auto;
-	padding: 0 40px 200px 40px;
+	padding: 0 80px;
 }
 
 .row {
 	display: flex;
+	margin: auto;
+	justify-content: space-between;
+	padding: 180px 0px;
 }
 
 .col {
 	width: 50%;
-	// padding: 126px;
-	// overflow: hidden;
+	margin-left: -12vw;
+	margin-right: -12vw;
+	&Title {
+		position: relative;
+	}
 }
 
 .title-box {
+	position: absolute;
+	bottom: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -37,7 +44,7 @@ $pointColor: #017451;
 
 .big-title {
 	@extend .basic-text;
-	font-size: $bigTitle;
+	font-size: $bigMainTitle;
 	font-weight: bold;
 }
 
@@ -51,17 +58,22 @@ $pointColor: #017451;
 .input-title {
 	@extend .basic-text;
 	font-size: $inputTitle;
+	margin-bottom: 12px;
 }
 
-.imgFrame {
-	width: 634px;
-	overflow: hidden;
+.input-linkText {
+	margin-top: 12px;
+	margin-bottom: 45px;
+	color: $subFontColor;
+	font-size: 13px;
+}
+.input-linkText a {
+	text-decoration: none;
+	color: $pointColor;
 }
 
-#login-page .logoImg {
-	position: absolute;
-	align-self: center;
-	height: $bigLogoHeight;
+.bigLogoImg {
+	width: 100%;
 }
 
 .input-wrap {
@@ -69,18 +81,61 @@ $pointColor: #017451;
 	padding-left: 0px;
 }
 
-.btn-text {
+.input {
+	width: 100%;
 	font-size: 16px;
 	color: $mainFontColor;
-	background-color: $pointColor;
-}
-
-.submit {
-	// position: absolute;
-	width: 100%;
-	background-color: $pointColor;
 	box-shadow: none;
 	border: none;
 	border-radius: 15px;
 	height: 56px;
+	&Btn {
+		background-color: $pointColor;
+	}
+	&Text {
+		background-color: $greyColor;
+		margin: 4px 0px;
+		padding: 16px;
+		outline-width: 0;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	.col {
+		margin-left: -2vw;
+		margin-right: -2vw;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	/* 타블렛 */
+	.container {
+		width: 100%;
+		padding: 0 40px;
+	}
+	.col {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.row {
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: 80px;
+	}
+	.big-title {
+		font-size: $mediumMainTitle;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/* 모바일 */
+
+	.row {
+		padding-top: 20vh;
+		padding-bottom: 0px;
+	}
+	.title-box {
+		display: none;
+	}
 }
