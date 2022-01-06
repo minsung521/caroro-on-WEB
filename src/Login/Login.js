@@ -15,7 +15,6 @@ function Login() {
 					</div>
 					<div className="col colImg">
 						<img className="bigLogoImg" src={CaroroLogo} alt="caroro-logo" />
-
 						<ul className="input-wrap">
 							<li>
 								<div className="input-title">카로로에 로그인하세요</div>

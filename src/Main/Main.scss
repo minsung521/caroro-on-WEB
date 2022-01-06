@@ -1,5 +1,70 @@
 @import "../components/common.scss";
 
-div {
-	color: white;
+.container {
+	width: 100%;
+	max-width: 1240px;
+	padding: 80px 160px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	margin-left: -16vw; //수정필요
+	margin-right: -16vw; //수정필요
+	padding: 0;
+}
+
+.smallFixedImg {
+	top: 8px;
+	right: 8px;
+	height: 162px;
+	position: absolute;
+}
+
+.userInfoCard {
+	background-color: $greyColor;
+	position: relative;
+	border-radius: 15px;
+	width: 32%;
+	height: 104px;
+	padding: 0;
+}
+
+.userProfileImg {
+	position: absolute;
+	border-radius: 50%;
+	height: 57px;
+	width: 57px;
+	left: 20px;
+	top: 23.5px;
+}
+
+.userName {
+	@extend .basic-text;
+	position: absolute;
+	background-color: $greyColor;
+	font-size: 24px;
+	left: 96px;
+	top: 34.5px;
+}
+
+.userPoint {
+	font-weight: bold;
+	color: $pointColorLight;
+	position: absolute;
+	background-color: $greyColor;
+	right: 20px;
+	top: 39.5px;
+}
+
+@media screen and (max-width: 1600px) {
+}
+
+@media screen and (max-width: 1023px) {
+	/* 타블렛 */
+}
+
+@media screen and (max-width: 767px) {
+	/* 모바일 */
 }

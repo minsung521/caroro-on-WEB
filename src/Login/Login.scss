@@ -1,20 +1,20 @@
 @import "../components/common.scss";
 
-.container {
+#login-page .container {
 	width: 100%;
 	max-width: 1240px;
 	margin: auto;
 	padding: 0 80px;
 }
 
-.row {
+#login-page .row {
 	display: flex;
 	margin: auto;
 	justify-content: space-between;
 	padding: 180px 0px;
 }
 
-.col {
+#login-page .col {
 	width: 50%;
 	margin-left: -12vw;
 	margin-right: -12vw;
@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 1600px) {
-	.col {
+	#login-page .col {
 		margin-left: -2vw;
 		margin-right: -2vw;
 	}
@@ -98,16 +98,16 @@
 
 @media screen and (max-width: 1023px) {
 	/* 타블렛 */
-	.container {
+	#login-page .container {
 		width: 100%;
 		padding: 0 40px;
 	}
-	.col {
+	#login-page .col {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
 	}
-	.row {
+	#login-page .row {
 		flex-direction: column;
 		justify-content: center;
 		padding-bottom: 80px;
@@ -120,7 +120,7 @@
 @media screen and (max-width: 767px) {
 	/* 모바일 */
 
-	.row {
+	#login-title .row {
 		padding-top: 20vh;
 		padding-bottom: 0px;
 	}
