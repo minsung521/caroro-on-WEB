@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import "./Main.scss";
+import Slider from "react-slick";
 import caroroLogo from "../assets/caroro-small-topright.svg";
 import userProfileImg from "../store/test/userProfileImg.png";
 
@@ -41,6 +42,14 @@ function Main() {
 		},
 	]);
 
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	};
+
 	return (
 		<Fragment id="main-page">
 			<div className="container">
@@ -56,9 +65,26 @@ function Main() {
 						<div className="userPoint">{user.point + " 포인트"}</div>
 					</div>
 				</div>
-				<div className="row">
-					<img src="" alt="" />
-				</div>
+				<Slider {...settings}>
+					<div>
+						<h3>1</h3>
+					</div>
+					<div>
+						<h3>2</h3>
+					</div>
+					<div>
+						<h3>3</h3>
+					</div>
+					<div>
+						<h3>4</h3>
+					</div>
+					<div>
+						<h3>5</h3>
+					</div>
+					<div>
+						<h3>6</h3>
+					</div>
+				</Slider>
 			</div>
 		</Fragment>
 	);
