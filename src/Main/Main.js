@@ -41,26 +41,32 @@ function Main() {
 		},
 	]);
 
+	const setting = [];
+
 	return (
-		<Fragment id="main-page">
-			<div className="container">
-				<img className="smallFixedImg" src={caroroLogo} alt="caroro-logo" />
-				<div className="row">
-					<div className="userInfoCard">
+		<>
+			<div className="main-container">
+				<img
+					className="main-container__fixed-logo"
+					src={caroroLogo}
+					alt="caroro-logo"
+				/>
+				<div className="main-container__row">
+					<div className="profileCard">
 						<img
-							className="userProfileImg"
+							className="profileCard__img"
 							src={userProfileImg}
 							alt="user-profile"
 						/>
-						<div className="userName">{user.name}</div>
-						<div className="userPoint">{user.point + " 포인트"}</div>
+						<div className="profileCard__name">{user.name}</div>
+						<div className="profileCard__point">{user.point + " 포인트"}</div>
 					</div>
 				</div>
-				<div className="row">
+				<div className="main-container__row">
 					<img src="" alt="" />
 				</div>
 			</div>
-		</Fragment>
+		</>
 	);
 }
 
