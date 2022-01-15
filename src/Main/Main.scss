@@ -2,6 +2,18 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+.test {
+	background-color: white;
+	color: green;
+	border-color: red;
+	width: 30px;
+	height: 30px;
+}
+
+.text-slidebox {
+	width: 100px;
+}
+
 .main-container {
 	width: 100%;
 	max-width: 1240px;
