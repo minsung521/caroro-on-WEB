@@ -1,24 +1,22 @@
 @import "../components/common.scss";
 
-#login-page .container {
+.login-container {
 	width: 100%;
 	max-width: 1240px;
 	margin: auto;
 	padding: 0 80px;
-}
 
-#login-page .row {
-	display: flex;
-	margin: auto;
-	justify-content: space-between;
-	padding: 180px 0px;
-}
+	&__row {
+		display: flex;
+		margin: auto;
+		justify-content: space-between;
+		padding: 180px 0px;
+	}
 
-#login-page .col {
-	width: 50%;
-	margin-left: -12vw;
-	margin-right: -12vw;
-	&Title {
+	&__col {
+		width: 50%;
+		margin-left: -12vw;
+		margin-right: -12vw;
 		position: relative;
 	}
 }
@@ -29,90 +27,87 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	&__title {
+		@extend .basic-text;
+		font-size: $bigMainTitle;
+		font-weight: bold;
+	}
+	&__subtitle {
+		@extend .basic-text;
+		font-size: $smallTitle;
+		font-weight: bold;
+		color: $subFontColor;
+	}
 }
 
-.big-title {
-	@extend .basic-text;
-	font-size: $bigMainTitle;
-	font-weight: bold;
-}
-
-.small-title {
-	@extend .basic-text;
-	font-size: $smallTitle;
-	font-weight: bold;
-	color: $subFontColor;
-}
-
-.input-title {
-	@extend .basic-text;
-	font-size: $inputTitle;
-	margin-bottom: 12px;
-}
-
-.input-linkText {
-	margin-top: 12px;
-	margin-bottom: 45px;
-	color: $subFontColor;
-	font-size: 13px;
-}
-.input-linkText a {
-	text-decoration: none;
-	color: $pointColor;
-}
-
-.bigLogoImg {
+.logo__img {
 	width: 100%;
-}
-
-.input-wrap {
-	list-style: none;
-	padding-left: 0px;
 }
 
 .input {
-	width: 100%;
-	font-size: 16px;
-	color: $mainFontColor;
-	box-shadow: none;
-	border: none;
-	border-radius: 15px;
-	height: 56px;
-	&Btn {
-		background-color: $pointColor;
+	list-style: none;
+	padding-left: 0px;
+	&__text {
+		width: 100%;
+		font-size: 16px;
+		color: $mainFontColor;
+		box-shadow: none;
+		border: none;
+		border-radius: 15px;
+		height: 56px;
+		&--form {
+			background-color: $greyColor;
+			margin: 4px 0px;
+			padding: 16px;
+			outline-width: 0;
+		}
+		&--submit {
+			background-color: $pointColor;
+		}
 	}
-	&Text {
-		background-color: $greyColor;
-		margin: 4px 0px;
-		padding: 16px;
-		outline-width: 0;
+	&__title {
+		@extend .basic-text;
+		font-size: $inputTitle;
+		margin-bottom: 12px;
+	}
+	&__sign-up-text {
+		margin-top: 12px;
+		margin-bottom: 45px;
+		color: $subFontColor;
+		font-size: 13px;
+		&--link {
+			text-decoration: none;
+			color: $pointColor;
+		}
 	}
 }
 
 @media screen and (max-width: 1600px) {
-	#login-page .col {
-		margin-left: -2vw;
-		margin-right: -2vw;
+	.login-container {
+		&__col {
+			margin-left: -2vw;
+			margin-right: -2vw;
+		}
 	}
 }
 
 @media screen and (max-width: 1023px) {
 	/* 타블렛 */
-	#login-page .container {
+	.login-container {
 		width: 100%;
 		padding: 0 40px;
+		&__col {
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		&__row {
+			flex-direction: column;
+			justify-content: center;
+			padding-bottom: 80px;
+		}
 	}
-	#login-page .col {
-		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-	}
-	#login-page .row {
-		flex-direction: column;
-		justify-content: center;
-		padding-bottom: 80px;
-	}
-	.big-title {
+	.title-box__title {
 		font-size: $mediumMainTitle;
 	}
 }
@@ -120,9 +115,11 @@
 @media screen and (max-width: 767px) {
 	/* 모바일 */
 
-	#login-title .row {
-		padding-top: 20vh;
-		padding-bottom: 0px;
+	.login-container {
+		&__row {
+			padding-top: 20vh;
+			padding-bottom: 0px;
+		}
 	}
 	.title-box {
 		display: none;
