@@ -5,7 +5,7 @@ import userProfileImg from "../store/test/userProfileImg.png";
 
 const Main = () => {
 	const [user, setUser] = useState({
-		name: "인화",
+		name: "민성",
 		profileImg: "../store/test/userProfileImg.png",
 		point: 2022,
 	});
@@ -41,53 +41,6 @@ const Main = () => {
 		},
 	]);
 
-	// const [activeSlide, setActiveSlide] = useState(0);
-
-	// const settings = {
-	// 	dots: true,
-	// 	infinite: false,
-	// 	speed: 1000,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	// beforeChange: (current, next) => this.setState({ activeSlide: next }),
-	// 	beforeChange: (current, next) => setActiveSlide(next),
-	// };
-
-	// const settings = {
-	// 	dots: true,
-	// 	infinite: false,
-	// 	speed: 500,
-	// 	slidesToShow: 4,
-	// 	slidesToScroll: 4,
-	// 	initialSlide: 0,
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 1024,
-	// 			settings: {
-	// 				slidesToShow: 3,
-	// 				slidesToScroll: 3,
-	// 				infinite: true,
-	// 				dots: true,
-	// 			},
-	// 		},
-	// 		{
-	// 			breakpoint: 600,
-	// 			settings: {
-	// 				slidesToShow: 2,
-	// 				slidesToScroll: 2,
-	// 				initialSlide: 2,
-	// 			},
-	// 		},
-	// 		{
-	// 			breakpoint: 480,
-	// 			settings: {
-	// 				slidesToShow: 1,
-	// 				slidesToScroll: 1,
-	// 			},
-	// 		},
-	// 	],
-	// };
-
 	return (
 		<>
 			<div className="main-container">
@@ -107,36 +60,7 @@ const Main = () => {
 						<div className="profileCard__point">{user.point + " 포인트"}</div>
 					</div>
 				</div>
-				<div className="main-container__row">
-					<img src="" alt="" />
-					<div className="test slide">
-						{/* <h2>beforeChange and afterChange hooks</h2>
-						<p>
-							<strong>{activeSlide}</strong>
-						</p>
-
-						<Slider {...settings}>
-							<div className="test">
-								<h3>1</h3>
-							</div>
-							<div className="test">
-								<h3>2</h3>
-							</div>
-							<div className="test">
-								<h3>3</h3>
-							</div>
-							<div className="test">
-								<h3>4</h3>
-							</div>
-							<div className="test">
-								<h3>5</h3>
-							</div>
-							<div className="test">
-								<h3>6</h3>
-							</div>
-						</Slider> */}
-					</div>
-				</div>
+				<div className="main-container__row"></div>
 			</div>
 		</>
 	);
