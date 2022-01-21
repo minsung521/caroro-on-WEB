@@ -1,10 +1,10 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "./Main.scss";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import caroroLogo from "../assets/caroro-small-topright.svg";
 import userProfileImg from "../store/test/userProfileImg.png";
 
-function Main() {
+const Main = () => {
 	const [user, setUser] = useState({
 		name: "인화",
 		profileImg: "../store/test/userProfileImg.png",
@@ -42,7 +42,7 @@ function Main() {
 		},
 	]);
 
-	const [activeSlide, setActiveSlide] = useState(0);
+	// const [activeSlide, setActiveSlide] = useState(0);
 
 	// const settings = {
 	// 	dots: true,
@@ -54,44 +54,40 @@ function Main() {
 	// 	beforeChange: (current, next) => setActiveSlide(next),
 	// };
 
-	const settings = {
-		dots: true,
-		infinite: false,
-		speed: 500,
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		initialSlide: 0,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					infinite: true,
-					dots: true,
-				},
-			},
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-					initialSlide: 2,
-				},
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-		],
-	};
-
-	useEffect(() => {
-		console.log(activeSlide);
-	}, [activeSlide]);
+	// const settings = {
+	// 	dots: true,
+	// 	infinite: false,
+	// 	speed: 500,
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 4,
+	// 	initialSlide: 0,
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 1024,
+	// 			settings: {
+	// 				slidesToShow: 3,
+	// 				slidesToScroll: 3,
+	// 				infinite: true,
+	// 				dots: true,
+	// 			},
+	// 		},
+	// 		{
+	// 			breakpoint: 600,
+	// 			settings: {
+	// 				slidesToShow: 2,
+	// 				slidesToScroll: 2,
+	// 				initialSlide: 2,
+	// 			},
+	// 		},
+	// 		{
+	// 			breakpoint: 480,
+	// 			settings: {
+	// 				slidesToShow: 1,
+	// 				slidesToScroll: 1,
+	// 			},
+	// 		},
+	// 	],
+	// };
 
 	return (
 		<>
@@ -115,7 +111,7 @@ function Main() {
 				<div className="main-container__row">
 					<img src="" alt="" />
 					<div className="test slide">
-						<h2>beforeChange and afterChange hooks</h2>
+						{/* <h2>beforeChange and afterChange hooks</h2>
 						<p>
 							<strong>{activeSlide}</strong>
 						</p>
@@ -139,12 +135,12 @@ function Main() {
 							<div className="test">
 								<h3>6</h3>
 							</div>
-						</Slider>
+						</Slider> */}
 					</div>
 				</div>
 			</div>
 		</>
 	);
-}
+};
 
 export default Main;
